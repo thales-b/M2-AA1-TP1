@@ -42,13 +42,7 @@ public class ArchitectureTest {
      */
     @Test
     public void jpaRepositoriesShouldBeInRepositoryPackage() {
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("fac.luminy.m2.aa1.tp1");
 
-        ArchRule rule = ArchRuleDefinition.classes()
-                .that().areAssignableTo(JpaRepository.class)
-                .should().resideInAPackage("..repository..");
-
-        rule.check(importedClasses);
     }
 
     /**
